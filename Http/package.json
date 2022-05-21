@@ -1,18 +1,23 @@
 {
-  "name": "serverside",
-  "version": "1.0.0",
-  "description": "a node js tut",
-  "main": "httpserver.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "(https://github.com/Mohammadkaif7865/Nodejs)"
-  },
-  "keywords": [
-    "dd"
-  ],
-  "author": "Mohammad kaif",
-  "license": "ISC"
+    "name": "serverside",
+    "version": "1.0.0",
+    "description": "a node js tut",
+    "main": "index.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "(https://github.com/Mohammadkaif7865/Nodejs)"
+    },
+    "keywords": [
+        "node"
+    ],
+    "author": "Mohammad kaif",
+    "license": "ISC",
+    "dependencies": {
+        "colors": "^1.4.0",
+        "simple-node-logger": "^21.8.12"
+    }
 }
