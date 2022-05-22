@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
+let name;
 app.get('', (req, res) => {
-    console.log("Browser send us this =>>>>", req.query.name);
     res.send(`<h1> Hello ${req.query.name}</h1>
     <a href="/about">go to form<a>`);
 });
 app.get('/about', (req, res) => {
+    console.log("Browser send us this =>>>>", req.query.name);
     res.send(`<h1>Hi ${req.query.name}</h1>
     <form>
     <label for="myName">Name :</label>
