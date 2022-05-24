@@ -12,8 +12,8 @@ app.get('/profile', (req, res) => {
         email: 'xyz@gmail.com',
         city: 'San Francisco',
     }
-    res.render(`profile`)
-});
+    res.render(`profile`, { user })
+}); //Render to send files with data
 app.get('/about', (req, res) => {
     res.sendFile(`${htmlPath}/about.html`)
 });
@@ -22,5 +22,5 @@ app.get('/help', (req, res) => {
 });
 app.get('*', (req, res) => {
     res.sendFile(`${htmlPath}/404.html`)
-});
+}); //send File to send HTMl files 
 app.listen(5500);
