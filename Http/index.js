@@ -1,13 +1,13 @@
-const http = require('http');
-const data = require('./data');
-
-// function dataConnection(req, res) {
-//     // res.write("Hello this is Mohammad kaif");
-//     res.write("<h1>Hello this is Mohammad kaif</h1>");
-//     res.end();
-// }
-http.createServer((req, res) => {
-    res.writeHead(200, { 'contentType': 'application\json' });
-    res.write(JSON.stringify(data));
-    res.end();
-}).listen(4500);
+const { MongoClient } = require('mongodb');
+// const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb://localhost:27017';
+const client = new MongoClient(url);
+const dataBase = 'ecom';
+async function getData() {
+    let result = await client.connect();
+    let db = result.db(dataBase);
+    let collection = db.collection('products');
+    let response = await collection.find({}).toArray();
+    console.log(response);
+}
+getData();
