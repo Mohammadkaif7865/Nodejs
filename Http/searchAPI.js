@@ -13,7 +13,7 @@ app.get('/search/:key', async(req, res) => {
             },
             {
                 "category": { $regex: req.params.key }
-            }, //later we see haw to search for Number fields
+            }, //later we see how to search for Number fields
 
         ]
     });
